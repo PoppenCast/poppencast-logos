@@ -1,6 +1,6 @@
 %global forgeurl https://github.com/emansom/poppencast-logos
 
-Version: 0.0.1
+Version: 0.0.2
 
 %forgemeta
 
@@ -55,3 +55,6 @@ install -m 644 gdm-greeter-icon.dconf-lock %{buildroot}/usr/share/dconf/db/site.
 /usr/bin/dconf update
 
 %changelog
+* Wed Apr 03 2024 Ewout van Mansom <ewout@vanmansom.name> 0.0.2-1
+- new package built with tito
+

@@ -28,18 +28,20 @@ Site specific branding for PoppenCast appliances
 # not needed, just copying files
 
 %install
+mkdir -p %{buildroot}/usr/share/dconf/db/site.d
 install -m 644 poppencast-icon-small.png %{buildroot}/usr/share/pixmaps/logo/poppencast-icon-small.png
-mkdir -p %{buildroot}/usr/share/dconf/db/distro.d
-install -m 644 gdm-greeter-icon.dconf %{buildroot}/usr/share/dconf/db/distro.d/99-gdm-poppencast
-mkdir -p %{buildroot}/usr/share/dconf/db/distro.d/locks
-install -m 644 gdm-greeter-icon.dconf-lock %{buildroot}/usr/share/dconf/db/distro.d/locks/99-gdm-poppencast
+mkdir -p %{buildroot}/usr/share/dconf/db/site.d
+install -m 644 gdm-greeter-icon.dconf %{buildroot}/usr/share/dconf/db/site.d/99-gdm-poppencast
+mkdir -p %{buildroot}/usr/share/dconf/db/site.d/locks
+install -m 644 gdm-greeter-icon.dconf-lock %{buildroot}/usr/share/dconf/db/site.d/locks/99-gdm-poppencast
 
 %check
 # not needed, just copying files
 
 %files
-/usr/share/dconf/db/distro.d/99-gdm-poppencast
-/usr/share/dconf/db/distro.d/locks/99-gdm-poppencast
+/usr/share/pixmaps/logo/poppencast-icon-small.png
+/usr/share/dconf/db/site.d/99-gdm-poppencast
+/usr/share/dconf/db/site.d/locks/99-gdm-poppencast
 %doc README.md
 %license LICENSE
 

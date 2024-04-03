@@ -28,7 +28,7 @@ Site specific branding for PoppenCast appliances
 # not needed, just copying files
 
 %install
-mkdir -p %{buildroot}/usr/share/dconf/db/site.d
+mkdir -p %{buildroot}/usr/share/pixmaps/logo
 install -m 644 poppencast-icon-small.png %{buildroot}/usr/share/pixmaps/logo/poppencast-icon-small.png
 mkdir -p %{buildroot}/usr/share/dconf/db/site.d
 install -m 644 gdm-greeter-icon.dconf %{buildroot}/usr/share/dconf/db/site.d/99-gdm-poppencast
